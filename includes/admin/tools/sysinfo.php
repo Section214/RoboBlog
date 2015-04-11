@@ -8,7 +8,9 @@
 
 
 // Exit if accessed directly
-if( ! defined( 'ABSPATH' ) ) exit;
+if( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 
 /**
@@ -149,8 +151,9 @@ function roboblog_tools_sysinfo_get() {
     $active_plugins = get_option( 'active_plugins', array() );
 
     foreach( $plugins as $plugin_path => $plugin ) {
-        if( !in_array( $plugin_path, $active_plugins ) )
-            continue;
+        if( !in_array( $plugin_path, $active_plugins ) ) {
+                    continue;
+        }
 
         $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
     }
@@ -161,8 +164,9 @@ function roboblog_tools_sysinfo_get() {
     $return .= "\n" . '-- WordPress Inactive Plugins' . "\n\n";
 
     foreach( $plugins as $plugin_path => $plugin ) {
-        if( in_array( $plugin_path, $active_plugins ) )
-            continue;
+        if( in_array( $plugin_path, $active_plugins ) ) {
+                    continue;
+        }
 
         $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
     }
@@ -179,8 +183,9 @@ function roboblog_tools_sysinfo_get() {
         foreach( $plugins as $plugin_path ) {
             $plugin_base = plugin_basename( $plugin_path );
 
-            if( !array_key_exists( $plugin_base, $active_plugins ) )
-                continue;
+            if( !array_key_exists( $plugin_base, $active_plugins ) ) {
+                            continue;
+            }
 
             $plugin  = get_plugin_data( $plugin_path );
             $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
