@@ -1,0 +1,26 @@
+build_settings:
+    mysql:
+        host: "localhost"
+        user: "root"
+        pass: "root"
+
+setup:
+    mysql:
+        - "DROP DATABASE IF EXISTS roboblog_tests;"
+        - "CREATE DATABASE roboblog_tests;"
+        - "GRANT ALL PRIVILEGES ON roboblog_tests.* TO roboblog_tests@'localhost' IDENTIFIED BY 'roboblog_tests';"
+        
+test:
+    php_unit:
+        config:
+            - "phpunit.xml"
+        directory:
+            - "tests/"
+        run_from:
+            "unit-tests/"
+    php_mess_detector:
+        allow_failures: true
+
+complete:
+    mysql:
+        - "DROP DATABASE IF EXISTS roboblog_tests;"
