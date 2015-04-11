@@ -1,0 +1,13 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "globals": {
+        "jQuery": false,
+        "roboblog_vars": false
+    },
+    "immed": true,
+    "undef": true,
+    "unused": true,
+    "boss": true,
+    "browser": true
+}
