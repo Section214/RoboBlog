@@ -8,7 +8,9 @@
 
 
 // Exit if accessed directly
-if( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) exit;
+if( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+    exit;
+}
 
 
 // Load main plugin file
