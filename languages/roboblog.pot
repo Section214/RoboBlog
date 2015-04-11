@@ -1,0 +1,235 @@
+# Copyright (C) 2015 RoboBlog
+# This file is distributed under the same license as the RoboBlog package.
+msgid ""
+msgstr ""
+"Project-Id-Version: RoboBlog 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/RoboBlog\n"
+"POT-Creation-Date: 2015-04-11 09:15:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/admin/pages.php:27
+msgid "RoboBlog Settings"
+msgstr ""
+
+#: includes/admin/pages.php:27
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/pages.php:28
+msgid "RoboBlog Tools"
+msgstr ""
+
+#: includes/admin/pages.php:28
+msgid "Tools"
+msgstr ""
+
+#: includes/admin/pages.php:30
+msgid "RoboBlog Upgrades"
+msgstr ""
+
+#: includes/admin/settings/register.php:24
+msgid "General"
+msgstr ""
+
+#: includes/admin/settings/register.php:42
+msgid "General Settings"
+msgstr ""
+
+#: includes/admin/settings/register.php:198
+msgid "Settings updated."
+msgstr ""
+
+#: includes/admin/settings/register.php:558
+msgid "Upload File"
+msgstr ""
+
+#: includes/admin/settings/register.php:585
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr ""
+
+#: includes/admin/tools/sysinfo.php:26
+msgid ""
+"To copy the system info, click below then press Ctrl+C (PC) or Cmd+C (Mac)."
+msgstr ""
+
+#: includes/admin/tools/sysinfo.php:29
+msgid "Download System Info File"
+msgstr ""
+
+#: includes/admin/tools/tools.php:54
+msgid "System Info"
+msgstr ""
+
+#: includes/admin/welcome.php:53
+msgid "Getting started with RoboBlog"
+msgstr ""
+
+#: includes/admin/welcome.php:118
+msgid "What's New"
+msgstr ""
+
+#: includes/admin/welcome.php:121
+msgid "Getting Started"
+msgstr ""
+
+#: includes/admin/welcome.php:139 includes/admin/welcome.php:172
+msgid "Welcome to RoboBlog %s"
+msgstr ""
+
+#: includes/admin/welcome.php:140 includes/admin/welcome.php:173
+msgid ""
+"Thank you for purchasing RoboBlog! RoboBlog %s is ready to make your content "
+"farming faster, safer, and better!"
+msgstr ""
+
+#: includes/admin/welcome.php:141 includes/admin/welcome.php:174
+msgid "Version %s"
+msgstr ""
+
+#: includes/admin/welcome.php:146
+msgid "Initial Release!"
+msgstr ""
+
+#: includes/admin/welcome.php:154 includes/admin/welcome.php:187
+msgid "Go to RoboBlog Settings"
+msgstr ""
+
+#: includes/admin/welcome.php:179
+msgid ""
+"Use the tips below to get started using RoboBlog. You'll be up and running "
+"in no time!"
+msgstr ""
+
+#: includes/post-types.php:22
+msgctxt "rbfeed post type name"
+msgid "Feeds"
+msgstr ""
+
+#: includes/post-types.php:23
+msgctxt "singular rbfeed post type name"
+msgid "Feed"
+msgstr ""
+
+#: includes/post-types.php:24
+msgid "Add New"
+msgstr ""
+
+#: includes/post-types.php:25
+msgid "Add New Feed"
+msgstr ""
+
+#: includes/post-types.php:26
+msgid "New Feed"
+msgstr ""
+
+#: includes/post-types.php:27
+msgid "Edit Feed"
+msgstr ""
+
+#: includes/post-types.php:28
+msgid "All Feeds"
+msgstr ""
+
+#: includes/post-types.php:29
+msgid "View Feed"
+msgstr ""
+
+#: includes/post-types.php:30
+msgid "Search Feeds"
+msgstr ""
+
+#: includes/post-types.php:31
+msgid "No feeds found"
+msgstr ""
+
+#: includes/post-types.php:32
+msgid "No feeds found in Trash"
+msgstr ""
+
+#: includes/post-types.php:33
+msgctxt "rbfeed post type menu name"
+msgid "RoboBlog"
+msgstr ""
+
+#: includes/post-types.php:63
+msgid "Enter feed title here (will not be shown publicly)"
+msgstr ""
+
+#: includes/post-types.php:80 includes/post-types.php:81
+msgid "Feed updated."
+msgstr ""
+
+#: includes/post-types.php:82
+msgid "Feed published."
+msgstr ""
+
+#: includes/post-types.php:83
+msgid "Feed saved."
+msgstr ""
+
+#: includes/post-types.php:84
+msgid "Feed submitted."
+msgstr ""
+
+#: includes/post-types.php:102
+msgid "%1$s feed updated."
+msgid_plural "%1$s feeds updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/post-types.php:103
+msgid "%1$s feed not updated, somebody is editing it."
+msgid_plural "%1$s feeds not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/post-types.php:104
+msgid "%1$s feed permanently deleted."
+msgid_plural "%1$s feeds permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/post-types.php:105
+msgid "%1$s feed moved to the Trash."
+msgid_plural "%1$s feeds moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/post-types.php:106
+msgid "%1$s feed restored from the Trash."
+msgid_plural "%1$s feeds restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/scripts.php:44
+msgid "Insert Image"
+msgstr ""
+
+#: includes/scripts.php:45
+msgid "Select Image"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "RoboBlog"
+msgstr ""
+
+#. #-#-#-#-#  roboblog.pot (RoboBlog 1.0.0)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  roboblog.pot (RoboBlog 1.0.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://section214.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Content farming automation for WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Daniel J Griffiths"
+msgstr ""
