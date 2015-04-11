@@ -16,8 +16,6 @@ matrix:
     env: WP_VERSION=latest WP_MULTISITE=1
   exclude:
   - php: hhvm
-    env: WP_VERSION=3.9.2 WP_MULTISITE=0
-  - php: hhvm
     env: WP_VERSION=4.0 WP_MULTISITE=0
   fast_finish: true
 before_script:
@@ -25,3 +23,9 @@ before_script:
 script:
 - if [[ $TRAVIS_PHP_VERSION = '5.5' && $WP_VERSION = 'latest' && $WP_MULTISITE = '0'
   ]]; then phpunit --coverage-clover=coverage.clover; else phpunit; fi
+after_script:
+- if [[ $TRAVIS_PHP_VERSION = '5.5' && $WP_VERSION = 'latest' && $WP_MULTISITE = '0'
+  ]]; then wget https://scrutinizer-ci.com/ocular.phar; fi
+- if [[ $TRAVIS_PHP_VERSION = '5.5' && $WP_VERSION = 'latest' && $WP_MULTISITE = '0'
+  ]]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover;
+  fi
