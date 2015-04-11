@@ -17,16 +17,16 @@ tools:
                 too_many_fields: false
                 too_many_methods: false
                 excessive_class_complexity: false
-        php_code_sniffer: true
-        sensiolabs_security_checker: true
-        php_code_coverage: true
-        php_pdepend: true
-        php_loc:
-            enabled: true
-            excluded_dirs: [tests, languages, includes/libraries, bin, assets]
-        php_cpd:
-            enabled: true
-            excluded_dirs: [tests, languages, includes/libraries, bin, assets]
+    php_code_sniffer: true
+    sensiolabs_security_checker: true
+    php_code_coverage: true
+    php_pdepend: true
+    php_loc:
+        enabled: true
+        excluded_dirs: [tests, languages, includes/libraries, bin, assets]
+    php_cpd:
+        enabled: true
+        excluded_dirs: [tests, languages, includes/libraries, bin, assets]
 checks:
     php:
         psr2_switch_declaration: false
