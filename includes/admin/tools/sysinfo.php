@@ -138,7 +138,7 @@ function roboblog_tools_sysinfo_get() {
         $return .= "\n" . '-- Must-Use Plugins' . "\n\n";
 
         foreach( $muplugins as $plugin => $plugin_data ) {
-            $return .= $plugin_data['Name'] . ': ' . $plugin_data['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
+            $return .= $plugin_data['Name'] . ': ' . $plugin_data['Version'] . ( isset( $plugin['PluginURI'] ) && $plugin['PluginURI'] != '' ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
         }
 
         $return = apply_filters( 'roboblog_sysinfo_after_wordpress_mu_plugins', $return );
@@ -155,7 +155,7 @@ function roboblog_tools_sysinfo_get() {
                     continue;
         }
 
-        $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
+        $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) && $plugin['PluginURI'] != '' ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
     }
 
     $return  = apply_filters( 'roboblog_sysinfo_after_wordpress_plugins', $return );
@@ -168,7 +168,7 @@ function roboblog_tools_sysinfo_get() {
                     continue;
         }
 
-        $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
+        $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) && $plugin['PluginURI'] != '' ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
     }
 
     $return  = apply_filters( 'roboblog_sysinfo_after_wordpress_plugins_inactive', $return );
@@ -188,7 +188,7 @@ function roboblog_tools_sysinfo_get() {
             }
 
             $plugin  = get_plugin_data( $plugin_path );
-            $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
+            $return .= $plugin['Name'] . ': ' . $plugin['Version'] . ( isset( $plugin['PluginURI'] ) && $plugin['PluginURI'] != '' ? ' (' . $plugin['PluginURI'] . ')' : '' ) . "\n";
         }
 
         $return  = apply_filters( 'roboblog_sysinfo_after_wordpress_ms_plugins', $return );
