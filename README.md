@@ -1,6 +1,6 @@
 # [RoboBlog](http://section214.com) #
 
-[![Travis](https://img.shields.io/travis/Section214/RoboBlog.svg)](https://travis-ci.org/Section214/RoboBlog) [![Code Coverage](https://scrutinizer-ci.com/g/Section214/RoboBlog/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Section214/RoboBlog/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Section214/RoboBlog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Section214/RoboBlog/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/Section214/Meetup-Connect/blob/master/license.txt) [![GitHub release](https://img.shields.io/github/release/Section214/RoboBlog.svg)](https://github.com/Section214/RoboBlog/releases)
+[![Travis](https://img.shields.io/travis/Section214/RoboBlog.svg)](https://travis-ci.org/Section214/RoboBlog) [![Code Coverage](https://scrutinizer-ci.com/g/Section214/RoboBlog/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Section214/RoboBlog/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Section214/RoboBlog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Section214/RoboBlog/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/Section214/RoboBlog/blob/master/license.txt) [![GitHub release](https://img.shields.io/github/release/Section214/RoboBlog.svg)](https://github.com/Section214/RoboBlog/releases)
 
 ### Welcome to our GitHub Repository
 

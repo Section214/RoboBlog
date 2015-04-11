@@ -1,4 +1,4 @@
-RoboBlog Unit Tests [![Build Status](https://secure.travis-ci.org/Section214/RoboBlog.png?branch=master)](http://travis-ci.org/Section214/RoboBlog) [![Coverage Status](https://coveralls.io/repos/Section214/RoboBlog/badge.png)](https://coveralls.io/r/Section214/RoboBlog) #
+RoboBlog Unit Tests [![Travis](https://img.shields.io/travis/Section214/RoboBlog.svg)](https://travis-ci.org/Section214/RoboBlog) [![Code Coverage](https://scrutinizer-ci.com/g/Section214/RoboBlog/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Section214/RoboBlog/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Section214/RoboBlog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Section214/RoboBlog/?branch=master) #
 
 This folder contains all the tests for RoboBlog.
 
