@@ -195,6 +195,10 @@
 -------------------------------------------------------------- */
 .post-type-rbfeed .manage-column.column-last_run,
 .post-type-rbfeed .manage-column.column-next_run,
-.post-type-rbfeed .manage-column.column-status {
+.post-type-rbfeed .manage-column.column-validity {
     width: 150px;
+}
+
+.post-type-rbfeed .manage-column.column-status {
+    width: 100px;
 }

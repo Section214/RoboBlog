@@ -104,3 +104,33 @@ function roboblog_get_current_page_url() {
 
     return apply_filters( 'roboblog_get_current_page_url', esc_url( $page_url ) );
 }
+
+
+/**
+ * Validate an RSS feed
+ *
+ * @since       1.0.0
+ * @param       string $feed The URL of a feed to check
+ * @return      array $return The returned values for the feed
+ */
+function roboblog_validate_feed( $feed ) {
+    $url        = 'http://validator.w3.org/feed/check.cgi?url=' . urlencode( $feed ) . '&output=soap12';
+    $response   = wp_remote_get( $url );
+    $return     = array();
+
+    if( is_wp_error( $response ) ) {
+        $return['success']  = false;
+        $return['message']  = __( 'Sorry, there was an error with your request.', 'roboblog' );
+    } else {
+        $feed_data  = $response['body'];
+        $return_xml = simplexml_load_string( (string) $feed_data );
+        $return_xml->registerXPathNamespace( 'm', 'http://validator.w3.org/feed/' );
+
+        $return['success']  = true;
+        $return['validity'] = $return_xml->xpath( '//m:feedvalidationresponse/m:validity' );
+        $return['errors']   = $return_xml->xpath( '//m:feedvalidationresponse/m:errors/m:errorcount' );
+        $return['warnings'] = $return_xml->xpath( '//m:feedvalidationresponse/m:warnings/m:warningcount' );
+    }
+
+    return $return;
+}

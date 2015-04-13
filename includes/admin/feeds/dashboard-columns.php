@@ -29,6 +29,7 @@ function roboblog_feed_columns( $columns ) {
         'title'     => __( 'Feed', 'roboblog' ),
         'last_run'  => __( 'Last Run', 'roboblog' ),
         'next_run'  => __( 'Next Run', 'roboblog' ),
+        'validity'  => __( 'Validity', 'roboblog' ),
         'status'    => __( 'Status', 'roboblog' )
     );
 
@@ -52,6 +53,9 @@ function roboblog_render_feed_columns( $column_name, $post_id ) {
                 // Do stuff
                 break;
             case 'next_run':
+                // Do stuff
+                break;
+            case 'validity':
                 // Do stuff
                 break;
             case 'status':
