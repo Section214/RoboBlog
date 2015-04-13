@@ -32,7 +32,7 @@ function roboblog_register_post_types() {
         'search_items'      => __( 'Search Feeds', 'roboblog' ),
         'not_found'         => __( 'No feeds found', 'roboblog' ),
         'not_found_in_trash'=> __( 'No feeds found in Trash', 'roboblog' ),
-        'menu_name'         => _x( 'RoboBlog', 'rbfeed post type menu name', 'roboblog' )
+        'menu_name'         => _x( 'RoboBlog', 'rbfeed post type menu name', 'roboblog' ),
     ) );
 
     $args = array(
@@ -44,6 +44,7 @@ function roboblog_register_post_types() {
         'hierarchical'      => false,
         'menu_position'     => 1815215212157,
         'supports'          => apply_filters( 'roboblog_feed_supports', array( 'title' ) ),
+        'menu_icon'         => 'dashicons-rss'
     );
 
     register_post_type( 'rbfeed', apply_filters( 'roboblog_feed_post_type_args', $args ) );
