@@ -189,3 +189,12 @@
     overflow: auto;
     display: block;
 }
+
+
+/* Post type column styles
+-------------------------------------------------------------- */
+.post-type-rbfeed .manage-column.column-last_run,
+.post-type-rbfeed .manage-column.column-next_run,
+.post-type-rbfeed .manage-column.column-status {
+    width: 150px;
+}
