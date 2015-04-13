@@ -2,7 +2,7 @@
 /**
  * Feed post type columns
  *
- * @package     RoboBlog\PostTypes\Dashboard\Columns
+ * @package     RoboBlog\Admin\Feeds\DashboardColumns
  * @since       1.0.0
  */
 
