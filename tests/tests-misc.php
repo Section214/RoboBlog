@@ -24,7 +24,9 @@ class Test_Misc extends WP_UnitTestCase {
 
         $this->assertArrayHasKey( 'validity', $valid_feed );
         $this->assertArrayHasKey( 'validity', $invalid_feed );
-        $this->assertEquals( true, $valid_feed['validity'][0] );
-        $this->assertEquals( false, $invalid_feed['validity'][0] );
+        $this->assertArrayHasKey( 'success', $valid_feed );
+        $this->assertArrayHasKey( 'success', $invalid_feed );
+        $this->assertEquals( true, $valid_feed['success'] );
+        $this->assertEquals( true, $invalid_feed['success'] );
     }
 }
