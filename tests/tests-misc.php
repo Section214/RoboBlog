@@ -17,4 +17,14 @@ class Test_Misc extends WP_UnitTestCase {
 
         $this->assertEquals( 'WP Engine', roboblog_get_host() );
     }
+
+    public function test_validate_feed() {
+        $valid_feed     = roboblog_validate_feed( 'http://section214.com/feed/' );
+        $invalid_feed   = roboblog_validate_feed( 'http://sports.yahoo.com/nfl/rss.xml' );
+
+        $this->assertArrayHasKey( 'validity', $valid_feed );
+        $this->assertArrayHasKey( 'validity', $invalid_feed );
+        $this->assertEquals( true, $valid_feed['validity'] );
+        $this->assertEquals( false, $invalid_feed['validity'] );
+    }
 }
