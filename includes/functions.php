@@ -124,8 +124,8 @@ function roboblog_validate_feed( $feed ) {
     } else {
         $feed_data  = $response['body'];
         $return_xml = simplexml_load_string( (string) $feed_data );
-        $return_xml->registerXPathNamespace( 'm', 'http://validator.w3.org/feed/' );
-
+        $return_xml->registerXPathNamespace( 'm', 'http://www.w3.org/2005/10/feed-validator' );
+        
         $return['success']  = true;
         $return['validity'] = $return_xml->xpath( '//m:feedvalidationresponse/m:validity' );
         $return['errors']   = $return_xml->xpath( '//m:feedvalidationresponse/m:errors/m:errorcount' );
