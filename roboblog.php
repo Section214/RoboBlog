@@ -103,7 +103,7 @@ if( ! class_exists( 'RoboBlog' ) ) {
                 require_once ROBOBLOG_DIR . 'includes/admin/actions.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/pages.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/settings/display.php';
-                require_once ROBOBLOG_DIR . 'includes/admin/feed-columns.php';
+                require_once ROBOBLOG_DIR . 'includes/admin/feeds/dashboard-columns.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/tools/tools.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/tools/sysinfo.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/welcome.php';
