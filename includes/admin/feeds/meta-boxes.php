@@ -160,7 +160,8 @@ function roboblog_save_feed_meta_boxes( $post_id ) {
 
     // The fields to save
     $fields = apply_filters( 'roboblog_feed_fields_save', array(
-        '_roboblog_feed_url'
+        '_roboblog_feed_url',
+        '_roboblog_post_type'
     ) );
 
     foreach( $fields as $field ) {
