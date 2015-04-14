@@ -43,7 +43,7 @@ function roboblog_register_post_types() {
         'show_in_menu'      => true,
         'hierarchical'      => false,
         'menu_position'     => 1815215212157,
-        'supports'          => apply_filters( 'roboblog_feed_supports', array( 'title' ) ),
+        'supports'          => apply_filters( 'roboblog_feed_supports', array( 'title', 'thumbnail' ) ),
         'menu_icon'         => 'dashicons-rss'
     );
 
