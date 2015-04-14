@@ -106,6 +106,7 @@ if( ! class_exists( 'RoboBlog' ) ) {
                 require_once ROBOBLOG_DIR . 'includes/admin/settings/contextual-help.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/feeds/dashboard-columns.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/feeds/contextual-help.php';
+                require_once ROBOBLOG_DIR . 'includes/admin/feeds/meta-boxes.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/tools/tools.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/tools/sysinfo.php';
                 require_once ROBOBLOG_DIR . 'includes/admin/welcome.php';
