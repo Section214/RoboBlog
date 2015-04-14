@@ -29,4 +29,9 @@ class Test_Misc extends WP_UnitTestCase {
         $this->assertEquals( true, $valid_feed['success'] );
         $this->assertEquals( true, $invalid_feed['success'] );
     }
+
+    public function test_get_post_types() {
+        $this->assertArrayHasKey( 'post', roboblog_get_post_types() );
+        $this->assertArrayHasKey( 'page', roboblog_get_post_types() );
+    }
 }
