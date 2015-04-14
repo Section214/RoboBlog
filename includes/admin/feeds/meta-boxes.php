@@ -68,3 +68,101 @@ function roboblog_rebrand_media_manager( $strings ) {
     return $strings;
 }
 add_filter( 'media_view_strings', 'roboblog_rebrand_media_manager', 10, 1 );
+
+
+/**
+ * Register new meta boxes
+ *
+ * @since       1.0.0
+ * @return      void
+ */
+function roboblog_add_meta_boxes() {
+    add_meta_box( 'feed_general', __( 'General', 'roboblog' ), 'roboblog_render_feed_general_meta_box', 'rbfeed', 'normal', 'default' );
+}
+add_action( 'add_meta_boxes', 'roboblog_add_meta_boxes' );
+
+
+/**
+ * Render the general config meta box
+ *
+ * @since       1.0.0
+ * @global      object $post The WordPress object for this post
+ * @return      void
+ */
+function roboblog_render_feed_general_meta_box() {
+    global $post;
+
+    $feed_url       = get_post_meta( $post->ID, '_roboblog_feed_url', true );
+
+    // Feed URL
+    $html  = '<p class="rbfeed-field">';
+    $html .= '<label for="_roboblog_feed_url"><strong>' . __( 'Feed URL', 'roboblog' ) . '</strong></label><br />';
+    $html .= '<input type="text" class="widefat" name="_roboblog_feed_url" id="_roboblog_feed_url" value="' . $feed_url . '" placeholder="http://" />';
+    $html .= '</p>';
+
+    echo $html;
+
+    // Allow extension of the meta box
+    do_action( 'roboblog_feed_general_fields', $post->ID );
+
+    wp_nonce_field( basename( __FILE__ ), 'roboblog_feed_nonce' );
+}
+
+
+/**
+ * Save post meta when the save_post action is called
+ *
+ * @since       1.0.0
+ * @param       int $post_id The ID of the post we are saving
+ * @global      object $post The WordPress object for this post
+ * @return      void
+ */
+function roboblog_save_feed_meta_boxes( $post_id ) {
+    global $post;
+
+    // Bail if this isn't the feed post type
+    if( ! isset( $post->post_type ) || $post->post_type != 'rbfeed' ) {
+        return $post_id;
+    }
+
+    // Bail if nonce can't be validated
+    if( ! isset( $_POST['roboblog_feed_nonce'] ) || ! wp_verify_nonce( $_POST['roboblog_feed_nonce'], basename( __FILE__ ) ) ) {
+        return $post_id;
+    }
+
+    // Bail if this is an autosave or bulk edit
+    if( ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || isset( $_REQUEST['bulk_edit'] ) ) {
+        return $post_id;
+    }
+
+    // Bail if this is a revision
+    if( $post->post_type == 'revision' ) {
+        return $post_id;
+    }
+
+    // Bail if the current user shouldn't be editing this
+    if( ! current_user_can( 'edit_post', $post_id ) ) {
+        return $post_id;
+    }
+
+    // The fields to save
+    $fields = apply_filters( 'roboblog_feed_fields_save', array(
+        '_roboblog_feed_url'
+    ) );
+
+    foreach( $fields as $field ) {
+        if( isset( $_POST[$field] ) ) {
+            if( is_string( $_POST[$field] ) ) {
+                $new = esc_attr( $_POST[$field] );
+            } else {
+                $new = $_POST[$field];
+            }
+
+            $new = apply_filters( 'roboblog_feed_save_' . $field, $new );
+            update_post_meta( $post_id, $field, $new );
+        } else {
+            delete_post_meta( $post_id, $field );
+        }
+    }
+}
+add_action( 'save_post', 'roboblog_save_feed_meta_boxes' );
