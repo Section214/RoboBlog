@@ -93,11 +93,24 @@ function roboblog_render_feed_general_meta_box() {
     global $post;
 
     $feed_url       = get_post_meta( $post->ID, '_roboblog_feed_url', true );
+    $post_type      = get_post_meta( $post->ID, '_roboblog_post_type', true );
 
     // Feed URL
     $html  = '<p class="rbfeed-field">';
     $html .= '<label for="_roboblog_feed_url"><strong>' . __( 'Feed URL', 'roboblog' ) . '</strong></label><br />';
     $html .= '<input type="text" class="widefat" name="_roboblog_feed_url" id="_roboblog_feed_url" value="' . $feed_url . '" placeholder="http://" />';
+    $html .= '</p>';
+
+    // Post type
+    $html .= '<p class="rbfeed-field">';
+    $html .= '<label for="_roboblog_post_type"><strong>' . __( 'Post Type', 'roboblog' ) . '</strong></label><br />';
+    $html .= '<select name="_roboblog_post_type" id="_roboblog_post_type">';
+
+    foreach( roboblog_get_post_types() as $id => $title ) {
+        $html .= '<option value="' . $id . '"' . ( $post_type && $post_type == $id ? ' selected="selected"' : '' ) . '>' . $title . '</option>';
+    }
+
+    $html .= '</select>';
     $html .= '</p>';
 
     echo $html;

@@ -134,3 +134,30 @@ function roboblog_validate_feed( $feed ) {
 
     return $return;
 }
+
+
+/**
+ * Retrieve an array of possible post types
+ *
+ * @since       1.0.0
+ * @return      array $types The available post types
+ */
+function roboblog_get_post_types() {
+    $types = array();
+
+    $post_types = get_post_types( array(
+        'public' => true,
+    ), 'objects' );
+
+    // Attachments are irrelevant
+    unset( $post_types['attachment'] );
+
+    // Can't add a feed to itself
+    unset( $post_types['rbfeed'] );
+
+    foreach( $post_types as $post_type ) {
+        $types[$post_type->name] = $post_type->labels->name;
+    }
+
+    return $types;
+}
